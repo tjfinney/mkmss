@@ -20,7 +20,7 @@ A copy of the copy might look like this:
 
 The program is stochastic, using random number generation to drive its various simulation processes. How each process behaves is determined by a corresponding model which is in turn constrained by user inputs. Hopefully the models used in this program successfully emulate the real world processes they are designed to mimic while avoiding unnecessary complexity. A good match between data produced by the simulation and textual variation data from a real corpus would encourage belief that the models used here are sufficient.
 
-## Downloading, installating, and running mkmss
+## Download, install, and run mkmss
 
 The `mkmss` program uses the [R](https://www.r-project.org/) language and environment for statistical computing and graphics. While the simulation can run using R alone, many will prefer to interact with `mkmss` through a graphical interface provided by the [RStudio](https://www.rstudio.com/products/rstudio/) integrated development environment (IDE) and RStudio's [Shiny](http://shiny.rstudio.com/) package. R, Rstudio, and Shiny are all free software.
 
