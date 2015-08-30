@@ -24,13 +24,17 @@ The program is stochastic, using random number generation to drive its various s
 
 The `mkmss` program uses the [R](https://www.r-project.org/) language and environment for statistical computing and graphics. While the simulation can run using R alone, many will prefer to interact with `mkmss` through a graphical interface provided by the [RStudio](https://www.rstudio.com/products/rstudio/) integrated development environment (IDE) and RStudio's [Shiny](http://shiny.rstudio.com/) package. R, Rstudio, and Shiny are all free software.
 
-R can be downloaded from one of the sites listed [here](https://cran.r-project.org/mirrors.html); The RStudio desktop edition is available [here](https://www.rstudio.com/products/rstudio/#Desktop); Shiny is installed by starting R then typing the following at the R command prompt:
+R can be downloaded from one of the sites listed [here](https://cran.r-project.org/mirrors.html); The RStudio desktop edition is available [here](https://www.rstudio.com/products/rstudio/#Desktop); Shiny is installed by starting R then typing the following at the R command prompt. (An Internet connection is required.)
 
 `install.packages("shiny")`
 
-(An Internet connection is required.)
+`mkmss` uses a number of other R packages which need to be installed as well.
 
-`mkmss` is installed as follows:
+`install.packages("graphics")`
+`install.packages("cluster")`
+`install.packages("ape")`
+
+The `mkmss` program itself is installed as follows:
 
 1. Create a directory to hold the program components. (For example, you could make a folder called "mkmss" on your desktop.)
 2. Download [server.R](server.R), [ui.R](ui.R), and [helpers.R](helpers.R) to the directory created at step 1.
