@@ -20,12 +20,30 @@ A copy of the copy might look like this:
 
 The program is stochastic, using random number generation to drive its various simulation processes. How each process behaves is determined by a corresponding model which is in turn constrained by user inputs. Hopefully the models used in this program successfully emulate the real world processes they are designed to mimic while avoiding unnecessary complexity. A good match between data produced by the simulation and textual variation data from a real corpus would encourage belief that the models used here are sufficient.
 
-## Installing mkmss
+## Downloading, installating, and running mkmss
 
-The `mkmss` program uses the [R](https://www.r-project.org/) language and environment for statistical computing and graphics, which is free software. The simulation can run as a standalone program (using [helpers.R](helpers.R)) but also has a graphical user interface so that users can interact with the program without having to edit the source code. The interface uses the [Shiny](http://shiny.rstudio.com/) package developed by [RStudio](https://www.rstudio.com/), which is also free software.
+The `mkmss` program uses the [R](https://www.r-project.org/) language and environment for statistical computing and graphics. While the simulation can run using R alone, many will prefer to interact with `mkmss` through a graphical interface provided by the [RStudio](https://www.rstudio.com/products/rstudio/) integrated development environment (IDE) and RStudio's [Shiny](http://shiny.rstudio.com/) package. R, Rstudio, and Shiny are all free software.
 
-It is essential to install R on the user's computer in order to run any part of the simulation. Instructions on how to download and install R are located [here](https://www.r-project.org/)
+R can be downloaded from one of the sites listed [here](https://cran.r-project.org/mirrors.html); The RStudio desktop edition is available [here](https://www.rstudio.com/products/rstudio/#Desktop); Shiny is installed by starting R then typing the following at the R command prompt:
 
-editing helpers.R, experiment with the program while avoiding Alternatively a graphical user interface based on RStudio's Shiny package can be used to change user inputs and observe the effects of these changes. The RStudio latter mode is recommended for those interested in experimenting with the simulation or be used in conjunction with [RStudio] and the [Shiny] package.
+`install.packages("shiny")`
 
+(An Internet connection is required.)
 
+`mkmss` is installed as follows:
+
+1. Create a directory to hold the program components. (For example, you could make a folder called "mkmss" on your desktop.)
+2. Download [server.R](server.R), [ui.R](ui.R), and [helpers.R](helpers.R) to the directory created at step 1.
+
+To launch `mkmss` with the graphical interface:
+
+1. Start RStudio.
+2. Open server.R or ui.R within RStudio.
+3. Press the `Run app` button.
+
+To launch `mkmss` as a standalone program:
+
+1. Open `helpers.R` with an editor (such as RStudio) then change the "2" to a "1" in the following line located near the end of the file: `if (c(TRUE, FALSE)[2]) {`.
+2. Edit `helpers.R` to set desired input parameters immediately below the `if (c(TRUE, FALSE)[2]) {` line.
+3. At the R command prompt, set the R working directory to the directory where `helpers.R` is located. E.g. `setwd("~/Desktop/mkmss")`.
+4. Run `helpers.R` by typing `source("helpers.R")` at the R command prompt.
