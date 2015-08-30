@@ -47,7 +47,9 @@ To launch `mkmss` with the graphical interface:
 
 To launch `mkmss` as a standalone program:
 
-1. Open `helpers.R` with an editor (such as RStudio) then change the "2" to a "1" in the following line located near the end of the file: `if (c(TRUE, FALSE)[2]) {`.
-2. Edit `helpers.R` to set desired input parameters immediately below the `if (c(TRUE, FALSE)[2]) {` line.
+1. Enable output from the standalone component `helpers.R` by opening the file with an editor (such as RStudio) then changing the "2" to a "1" in the following line located near the end of the file: `if (c(TRUE, FALSE)[2]) {`.
+2. Edit the input parameters immediately below the `if (c(TRUE, FALSE)[2]) {` line to have the desired values.
 3. At the R command prompt, set the R working directory to the directory where `helpers.R` is located. E.g. `setwd("~/Desktop/mkmss")`.
 4. Run `helpers.R` by typing `source("helpers.R")` at the R command prompt.
+
+When enabled the standalone component produces two files, `` and ``, which are saved in the R working directory. The entire domain object is also available as a variable named ``.
