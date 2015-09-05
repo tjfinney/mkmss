@@ -8,7 +8,7 @@ The `mkmss` computer program simulates incremental development of a textual corp
 
 `1111111111`
 
-Each `1` represents the initial state of a *character* of the initial text. The broadest meaning of *character* is "something that can vary" and might include differences of orthography (i.e. those relating to spelling, diacritics, punctuation). However, semantic variations (i.e. those that affect meaning) are typically uppermost in the minds of researchers. 
+Each `1` represents the initial state of a *character* of the initial text. The broadest meaning of *character* is "something that can vary" and might include differences of orthography (relating to spelling, diacritics, punctuation). However, semantic variations (affecting meaning) are typically uppermost in researchers' minds. 
 
 Whenever the program makes a copy, the states of zero or more characters are subject to change. A copy of the initial text might therefore look like this:
 
