@@ -24,7 +24,7 @@ An explanation of user inputs and program components is planned to be provided i
 
 The `mkmss` program uses the [R](https://www.r-project.org/) language and environment for statistical computing and graphics. While the simulation can run using R alone, many will prefer to interact with `mkmss` through a graphical interface provided by the [RStudio](https://www.rstudio.com/products/rstudio/) integrated development environment (IDE) and RStudio's [Shiny](http://shiny.rstudio.com/) package. R, Rstudio, and Shiny are all free software.
 
-R can be downloaded from one of the sites listed [here](https://cran.r-project.org/mirrors.html); The RStudio desktop edition is available [here](https://www.rstudio.com/products/rstudio/#Desktop); Shiny is installed by starting R then typing the following at the R command prompt. (An Internet connection is required.)
+R can be downloaded from one of the sites listed [here](https://cran.r-project.org/mirrors.html); the RStudio desktop edition is available [here](https://www.rstudio.com/products/rstudio/#Desktop); Shiny is installed by starting R then typing the following at the R command prompt. (An Internet connection is required.)
 
 `install.packages("shiny")`
 
