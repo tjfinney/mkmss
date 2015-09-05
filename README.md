@@ -1,8 +1,6 @@
 # mkmss
 
-## Tim Finney
-
-### &copy; 2015
+## Tim Finney, 2015
 
 ## Introduction
 
@@ -20,7 +18,7 @@ A copy of the copy might look like this:
 
 `1113111212`
 
-An explanation of how the program works is provided in the `mkmss` [wiki](https://github.com/tjfinney/mkmss/wiki) pages.
+An explanation of user inputs and program components is planned to be provided in the `mkmss` [wiki](https://github.com/tjfinney/mkmss/wiki) pages.
 
 ## Download, install, and run mkmss
 
@@ -54,12 +52,14 @@ To launch `mkmss` as a standalone program:
 3. At the R command prompt set the R working directory to the directory where `helpers.R` is located. On Mac and Linux systems this would be achieved by typing `setwd("~/Desktop/mkmss")` if `~/Desktop/mkmss` were the path to the directory where `helpers.R` is installed. On other systems the path syntax may differ; e.g. on Windows something like `C:\Desktop\mkmss` would be required.
 4. Run `helpers.R` by typing `source("helpers.R")` at the R command prompt.
 
-When output is enabled for the `helpers.R` standalone component it saves the data and distance matrices for recovered texts as comma separated vector files named `mkmss.data.txt` and `mkmss.dist.txt`. These are saved in the R working directory, and can be opened for inspection using a spreadsheet program or a text editor.
+When output is enabled for the `helpers.R` standalone component it saves the data and distance matrices for recovered texts as comma separated vector files named `mkmss.data.txt` and `mkmss.dist.txt`. These are saved in the R working directory, and can be opened for inspection using a spreadsheet program or text editor.
 
-If output is enabled then the entire domain object is also made available as a variable named `world`. This object contains every item produced during a run of the simulation program, and is potentially large. Consequently it is not a good idea to attempt to view the `world` object directly (by typing `world` at the command prompt). Components of the `world` object may be inspected using `$` notation at the command prompt; a few examples are listed below:
+If output is enabled then the entire domain object is also made available as a variable named `world`. This object contains every item produced during a run of the simulation program, and is potentially large. Consequently it is not a good idea to attempt to view the `world` object directly (e.g. by typing `world` at the command prompt). Components of the `world` object may be inspected using `$` notation at the command prompt; a few examples are listed below:
 
-* `world$nn.stt` List numbers of states for all characters.
-* `world$pll[["Rome"]]$stt` The list of preferred states for each character for the `Place` object named *Rome*. (By default `helpers.R` has `Place` objects for Rome, Ephesus, Antioch, and Alexandria.)
-* `world$pll[["Rome"]]$tt.extant[[1]]` The first `Text` object in the collection of extant texts for Rome.
-* `world$pll[["Rome"]]$tt.lost[[1]]` The first `Text` object in the collection of lost texts for Rome.
-* `world$pll[["Rome"]]$tt.lost[[1]]$events` The list of events for the first `Text` object in the collection of lost texts for Rome.
+* `world$nn.stt` List numbers of states for all characters used in the current run of the simulation.
+* `world$pll[["Rome"]]$stt` List of preferred states for each character for the `Place` object named *Rome*. (By default `helpers.R` has `Place` objects for Rome, Ephesus, Antioch, and Alexandria.)
+* `world$pll[["Rome"]]$tt.extant[[1]]` First `Text` object in the collection of extant texts for Rome.
+* `world$pll[["Rome"]]$tt.lost[[1]]` First `Text` object in the collection of lost texts for Rome.
+* `world$pll[["Rome"]]$tt.lost[[1]]$events` List of events for the first `Text` object in the collection of lost texts for Rome.
+
+(The final step of the simulation process recovers a number of texts from the extant and lost collections of each `Place`.)
