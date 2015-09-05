@@ -42,14 +42,19 @@ The `mkmss` program itself is installed as follows:
 To launch `mkmss` with the graphical interface:
 
 1. Start RStudio.
-2. Open server.R or ui.R within RStudio.
+2. Open `server.R` or `ui.R` within RStudio.
 3. Press the `Run app` button.
 
 To launch `mkmss` as a standalone program:
 
 1. Enable output from the standalone component `helpers.R` by opening the file with an editor (such as RStudio) then changing the "2" to a "1" in the following line located near the end of the file: `if (c(TRUE, FALSE)[2]) {`.
-2. Edit the input parameters immediately below the `if (c(TRUE, FALSE)[2]) {` line to have the desired values.
-3. At the R command prompt, set the R working directory to the directory where `helpers.R` is located. E.g. `setwd("~/Desktop/mkmss")`.
+2. Edit the input parameters immediately below the `if (c(TRUE, FALSE)[2]) {` line to have whatever values are desired.
+3. At the R command prompt set the R working directory to the directory where `helpers.R` is located. On Mac and Linux systems this would be achieved by typing `setwd("~/Desktop/mkmss")` if `~/Desktop/mkmss` were the path to the directory where `helpers.R` is installed. On other systems the path syntax may differ; e.g. on Windows something like `C:\Desktop\mkmss` would be required.
 4. Run `helpers.R` by typing `source("helpers.R")` at the R command prompt.
 
-When enabled the standalone component produces two files, `` and ``, which are saved in the R working directory. The entire domain object is also available as a variable named ``.
+When output is enabled for the `helpers.R` standalone component it produces two files, `mkmss.data.txt` and `mkmss.dist.txt`, which are saved in the R working directory. These can be opened for inspection using a spreadsheet program or a text editor.
+
+If output is enabled then the entire domain object is also made available as a variable named `world`. This object contains every item produced during a run of the simulation program, and is potentially very large so it is not a good idea to type `world` at the command prompt. Components of the `world` object produced by a run of the program can be inspected using `$` notation at the command prompt; a few examples are listed below:
+
+* `world$nn.stt` List numbers of states for all characters.
+
