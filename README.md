@@ -1,6 +1,8 @@
 # mkmss
 
-## Tim Finney 2015
+## Tim Finney
+
+### &copy; 2015
 
 ## Introduction
 
@@ -52,9 +54,13 @@ To launch `mkmss` as a standalone program:
 3. At the R command prompt set the R working directory to the directory where `helpers.R` is located. On Mac and Linux systems this would be achieved by typing `setwd("~/Desktop/mkmss")` if `~/Desktop/mkmss` were the path to the directory where `helpers.R` is installed. On other systems the path syntax may differ; e.g. on Windows something like `C:\Desktop\mkmss` would be required.
 4. Run `helpers.R` by typing `source("helpers.R")` at the R command prompt.
 
-When output is enabled for the `helpers.R` standalone component it produces two files, `mkmss.data.txt` and `mkmss.dist.txt`, which are saved in the R working directory. These can be opened for inspection using a spreadsheet program or a text editor.
+When output is enabled for the `helpers.R` standalone component it saves the data and distance matrices for recovered texts as comma separated vector files named `mkmss.data.txt` and `mkmss.dist.txt`. These are saved in the R working directory, and can be opened for inspection using a spreadsheet program or a text editor.
 
-If output is enabled then the entire domain object is also made available as a variable named `world`. This object contains every item produced during a run of the simulation program, and is potentially very large so it is not a good idea to type `world` at the command prompt. Components of the `world` object produced by a run of the program can be inspected using `$` notation at the command prompt; a few examples are listed below:
+If output is enabled then the entire domain object is also made available as a variable named `world`. This object contains every item produced during a run of the simulation program, and is potentially large. Consequently it is not a good idea to attempt to view the `world` object directly (by typing `world` at the command prompt). Components of the `world` object may be inspected using `$` notation at the command prompt; a few examples are listed below:
 
 * `world$nn.stt` List numbers of states for all characters.
+* `world$pll[["Rome"]]$stt` The list of preferred states for each character for the `Place` object named *Rome*. (By default `helpers.R` has `Place` objects for Rome, Ephesus, Antioch, and Alexandria.)
+* `world$pll[["Rome"]]$tt.extant[[1]]` The first `Text` object in the collection of extant texts for Rome.
+* `world$pll[["Rome"]]$tt.lost[[1]]` The first `Text` object in the collection of lost texts for Rome.
+* `world$pll[["Rome"]]$tt.lost[[1]]$events` The list of events for the first `Text` object in the collection of lost texts for Rome.
 
