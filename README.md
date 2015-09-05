@@ -20,7 +20,7 @@ A copy of the copy might look like this:
 
 `1113111212`
 
-The program is stochastic, using random number generation to drive its various simulation processes. How each process behaves is determined by a corresponding model which is in turn constrained by user inputs. Hopefully the models used in this program successfully emulate the real world processes they are designed to mimic while avoiding unnecessary complexity. A good match between data produced by the simulation and textual variation data from a real corpus would encourage belief that the models used here are sufficient.
+An explanation of how the program works is provided in the `mkmss` [wiki](https://github.com/tjfinney/mkmss/wiki) pages.
 
 ## Download, install, and run mkmss
 
@@ -63,4 +63,3 @@ If output is enabled then the entire domain object is also made available as a v
 * `world$pll[["Rome"]]$tt.extant[[1]]` The first `Text` object in the collection of extant texts for Rome.
 * `world$pll[["Rome"]]$tt.lost[[1]]` The first `Text` object in the collection of lost texts for Rome.
 * `world$pll[["Rome"]]$tt.lost[[1]]$events` The list of events for the first `Text` object in the collection of lost texts for Rome.
-
