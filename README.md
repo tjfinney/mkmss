@@ -18,7 +18,7 @@ A copy of the copy might look like this:
 
 `1113111212`
 
-An explanation of user inputs and program components is planned to be provided in the `mkmss` [wiki](https://github.com/tjfinney/mkmss/wiki) pages.
+At some point in the future an explanation of user inputs and program components is planned to be provided in the `mkmss` [wiki](https://github.com/tjfinney/mkmss/wiki) pages. In the mean time, discussion relating to an earlier version of the program is available [here](http://www.tfinney.net/Simulation/index.xhtml).
 
 ## Download, install, and run mkmss
 
